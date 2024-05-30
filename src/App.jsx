@@ -1,20 +1,29 @@
-import logo from "./logo.svg";
 import "./App.css";
-import GameInfos from "./projet/gameInfos.jsx";
-import Card from "./projet/cards";
-const nnn = {
+import GameInfos from "./pages/gameInfos.jsx";
+import Card from "./pages/board";
+
+const main = {
+  gap: "20px",
   display: "flex",
-  justifyContent: "center",
+  alignSelf: "center",
+  alignItems: "center",
   flexDirection: "column",
-  gap: "30px",
+  justifyContent: "center",
 };
 
 function App() {
   return (
-    <div style={nnn}>
-      <div style={{ textAlign: "center", color: "white" }}>
-        <h1>Memory Marvel</h1>
-      </div>
+    <div style={main}>
+      <p
+        style={{
+          color: "white",
+          fontSize: "40px",
+          fontWeight: 700,
+          textAlign: "center",
+        }}
+      >
+        Memory Marvel
+      </p>
       <GameInfos />
       <Card />
     </div>

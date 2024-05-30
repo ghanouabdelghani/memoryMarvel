@@ -1,15 +1,15 @@
-*{
-  margin: 0;
-  padding: 0;
-}
-
 body {
-  padding: 200px;
-
-  background-image: url("./assets/images/bg-cover.png");
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    font-optical-sizing: auto;
+    font-family: "Quicksand", sans-serif;
+    background-image: url("./assets/images/bg-cover.png");
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }

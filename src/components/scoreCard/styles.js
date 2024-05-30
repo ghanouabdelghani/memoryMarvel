@@ -1,0 +1,32 @@
+export const styles = {
+  main: {
+    display: "flex",
+    alignItems: "center",
+    position: "relative",
+    justifyContent: "center",
+  },
+  imageContainer: {
+    left: "0px",
+    width: "60px",
+    height: "60px",
+    display: "flex",
+    background: "white",
+    borderRadius: "50px",
+    position: "absolute",
+    alignItems: "center",
+    justifyContent: "center",
+    border: "solid 1px #DFE1E6",
+  },
+  textContainer: {
+    width: "200px",
+    height: "50px",
+    display: "flex",
+    fontWeight: 500,
+    fontSize: "18px",
+    background: "white",
+    borderRadius: "50px",
+    alignItems: "center",
+    justifyContent: "center",
+    border: "solid 1px #DFE1E6",
+  },
+};
