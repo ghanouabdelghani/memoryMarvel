@@ -1,6 +1,8 @@
+import React, { useCallback, useEffect, useState } from "react";
+
 import "./App.css";
 import GameInfos from "./pages/gameInfos.jsx";
-import Card from "./pages/board";
+import Board from "./pages/board";
 
 const main = {
   gap: "20px",
@@ -12,6 +14,25 @@ const main = {
 };
 
 function App() {
+  const [flipCount, setFlipCount] = useState(0);
+  const [timer, setTimer] = useState(5);
+
+  useEffect(() => {
+    if (timer > 0) {
+      const countdown = setInterval(() => {
+        setTimer((prevTimer) => prevTimer - 1);
+      }, 1000);
+
+      return () => clearInterval(countdown);
+    }
+  }, [timer]);
+
+  const handleCardPress = useCallback(() => {
+    setFlipCount((prevCount) => prevCount + 1);
+
+    // NDECLAUNCHIW THE TIMER EL KHATRA LEWLA
+  }, []);
+
   return (
     <div style={main}>
       <p
@@ -24,8 +45,8 @@ function App() {
       >
         Memory Marvel
       </p>
-      <GameInfos />
-      <Card />
+      <GameInfos count={flipCount} timer={timer} />
+      <Board onCardPress={handleCardPress} />
     </div>
   );
 }

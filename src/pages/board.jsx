@@ -39,7 +39,7 @@ const cardData = [
   },
 ];
 
-export default function Board() {
+export default function Board({ onCardPress }) {
   return (
     <div
       style={{
@@ -50,7 +50,7 @@ export default function Board() {
       }}
     >
       {cardData.map((item) => (
-        <Card imge={item.image} />
+        <Card image={item.image} onPress={onCardPress} />
       ))}
     </div>
   );

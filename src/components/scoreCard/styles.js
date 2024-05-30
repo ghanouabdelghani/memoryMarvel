@@ -18,11 +18,12 @@ export const styles = {
     border: "solid 1px #DFE1E6",
   },
   textContainer: {
-    width: "200px",
+    width: "150px",
     height: "50px",
     display: "flex",
     fontWeight: 500,
     fontSize: "18px",
+    paddingLeft: "50px",
     background: "white",
     borderRadius: "50px",
     alignItems: "center",

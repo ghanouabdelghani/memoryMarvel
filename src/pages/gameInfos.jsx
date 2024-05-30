@@ -4,22 +4,25 @@ import Timer from "../assets/icons/flip.svg";
 import Medal from "../assets/icons/medal.svg";
 import StopWatch from "../assets/icons/stopwatch.svg";
 
-const infoData = [
-  {
-    image: Medal,
-    title: "Score:",
-  },
-  {
-    image: Timer,
-    title: "Flips:",
-  },
-  {
-    image: StopWatch,
-    title: "Timer:",
-  },
-];
+export default function GameInfos({ count, timer }) {
+  const infoData = [
+    {
+      number: 0,
+      image: Medal,
+      title: "Score:",
+    },
+    {
+      image: Timer,
+      number: count,
+      title: "Flips:",
+    },
+    {
+      number: timer,
+      title: "Timer:",
+      image: StopWatch,
+    },
+  ];
 
-export default function GameInfos() {
   return (
     <div
       style={{
@@ -30,7 +33,7 @@ export default function GameInfos() {
       }}
     >
       {infoData.map((item) => (
-        <ScoreCard image={item.image} title={item.title} />
+        <ScoreCard image={item.image} title={item.title} number={item.number} />
       ))}
     </div>
   );
